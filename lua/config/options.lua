@@ -1,3 +1,7 @@
+-- Make sure to setup `mapleader` and `maplocalleader` before loading lazy.nvim so that mappings are correct.
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
 -- Line numbers
 vim.opt.number = true        -- Enable line numbers
 vim.opt.relativenumber = true -- Enable relative line numbers
