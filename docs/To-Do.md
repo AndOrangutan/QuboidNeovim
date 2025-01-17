@@ -2,6 +2,4 @@
 
 ## Bugs
 
-## Plugins
-
 ## Ideas

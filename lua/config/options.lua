@@ -33,7 +33,9 @@ vim.opt.backup = false        -- Disable backup
 
 -- Performance
 vim.opt.updatetime = 300      -- Faster completion
-vim.opt.timeoutlen = 500      -- Time to wait for a mapped sequence to complete
+-- vim.opt.timeoutlen = 500      -- Time to wait for a mapped sequence to complete
+vim.opt.timeout = true
+vim.opt.timeoutlen = 300
 
 -- Split windows
 vim.opt.splitbelow = true     -- Split below by default

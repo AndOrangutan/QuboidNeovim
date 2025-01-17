@@ -10,5 +10,6 @@
 
 ## Docs
 
+- [Plugins](docs/Plugins.md)
 - [To-Do](docs/To-Do.md)
 
