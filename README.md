@@ -4,7 +4,7 @@
 
 ## Setup
 
-## [Docs](docs/Docs.md)
+## Docs
 
 - [To-Do](docs/To-Do.md)
 
