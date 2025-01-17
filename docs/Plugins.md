@@ -6,6 +6,10 @@
 
 ## Installed
 
+### Git
+
+- [diffview.nvim](https://github.com/sindrets/diffview.nvim) - Single tabpage interface for easily cycling through diffs for all modified files for any git rev.
+
 ### Keybinding
 
 - [which-key.nvim](https://github.com/folke/which-key.nvim) - Create key bindings that stick.
