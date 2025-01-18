@@ -6,6 +6,7 @@ _M.init = function()
         return
     end
     require('config.options')
+    require('config.autocmds')
 end
 
 return _M
