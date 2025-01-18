@@ -14,6 +14,7 @@
 
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim) - Single tabpage interface for easily cycling through diffs for all modified files for any git rev.
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git integration for buffers.
+- [neogit](https://github.com/NeogitOrg/neogit) - An interactive and powerful Git interface for Neovim, inspired by Magit.
 
 ### Keybinding
 

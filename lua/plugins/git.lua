@@ -14,7 +14,7 @@ return {
         'lewis6991/gitsigns.nvim',
         event = {'BufReadPost', 'BufNewFile', 'BufWritePre'},
         opts = function ()
-            icons = require("util.icons")
+            icons = require('util.icons')
             return {
                 signs = {
                     add          = { text = icons.ui.bar_thick },
@@ -34,5 +34,23 @@ return {
                 },
             }
         end,
+    },
+    {
+        'NeogitOrg/neogit',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'sindrets/diffview.nvim',
+            'ibhagwan/fzf-lua',
+        },
+        lazy = true,
+        opts = {
+            integrations = {
+                diffview = true,
+                fzf_lua = true,
+            },
+        },
+        keys = {
+            { '<leader>gg', '<cmd>Neogit<cr>', desc = '[g]it [g]ui (neogit)'},
+        },
     },
 }
