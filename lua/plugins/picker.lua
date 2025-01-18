@@ -1,8 +1,11 @@
 return {
     {
         'ibhagwan/fzf-lua',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        dependencies = { 'echasnovski/mini.icons' },
         opts = {
+            defaults = {
+                file_icons = 'mini',
+            },
             hls               = {
                 normal = 'NormalFloat',
                 border = 'NormalFloat',

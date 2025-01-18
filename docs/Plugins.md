@@ -12,7 +12,7 @@
 
 ### Dependencies
 
-- [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) - Provides Nerd Font icons (glyphs) for use by neovim plugins.
+- [mini.icons](https://github.com/echasnovski/mini.icons) - Icon provider.
 
 ### Git
 
@@ -33,4 +33,4 @@
 
 - https://github.com/epwalsh/obsidian.nvim
     - https://github.com/epwalsh/obsidian.nvim/issues/770
-- 
+-
