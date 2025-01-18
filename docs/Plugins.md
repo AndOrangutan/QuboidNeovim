@@ -6,6 +6,10 @@
 
 ## Installed
 
+### Bloat
+
+- [mini.animate](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-animate.md) - Animate common Neovim actions.
+
 ### Dependencies
 
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) - Provides Nerd Font icons (glyphs) for use by neovim plugins.
@@ -24,3 +28,9 @@
 ### Picker
 
 - [fzf-lua](https://github.com/ibhagwan/fzf-lua) - Improved fzf.vim written in lua.
+
+## To-Do
+
+- https://github.com/epwalsh/obsidian.nvim
+    - https://github.com/epwalsh/obsidian.nvim/issues/770
+- 
