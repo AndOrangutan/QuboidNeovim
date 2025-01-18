@@ -1,5 +1,6 @@
 local _M = {}
 
+
 _M.border = {
 	{" ", "FloatBorder"},
 	{" ", "FloatBorder"},
@@ -10,4 +11,8 @@ _M.border = {
 	{" ", "FloatBorder"},
 	{" ", "FloatBorder"},
 }
+
+_M.colorscheme = "onedark"
+_M.background = "dark"
+
 return _M
