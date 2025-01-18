@@ -18,3 +18,7 @@
 ### Keybinding
 
 - [which-key.nvim](https://github.com/folke/which-key.nvim) - Create key bindings that stick.
+
+### Picker
+
+- [fzf-lua](https://github.com/ibhagwan/fzf-lua) - Improved fzf.vim written in lua.
