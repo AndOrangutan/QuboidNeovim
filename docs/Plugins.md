@@ -14,6 +14,10 @@
 
 - [mini.icons](https://github.com/echasnovski/mini.icons) - Icon provider.
 
+### Files
+
+- [oil.nvim](https://github.com/stevearc/oil.nvim) - Edit your filesystem like a buffer.
+
 ### Git
 
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim) - Single tabpage interface for easily cycling through diffs for all modified files for any git rev.

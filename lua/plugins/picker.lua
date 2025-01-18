@@ -5,6 +5,7 @@ return {
         opts = {
             defaults = {
                 file_icons = 'mini',
+                file_icon_padding = ' ',
             },
             hls               = {
                 normal = 'NormalFloat',
