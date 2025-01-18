@@ -7,6 +7,7 @@ _M.init = function()
     end
     require('config.options')
     require('config.autocmds')
+    require('config.keybinds')
 end
 
 return _M
