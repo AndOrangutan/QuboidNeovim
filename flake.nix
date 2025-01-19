@@ -15,6 +15,7 @@
     deps = with pkgs; [
       # pkgs.curl
       pkgs.fzf
+      pkgs.gcc
       pkgs.ripgrep
     ];
 

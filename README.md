@@ -7,6 +7,7 @@
 ### Dependencies
 
 - [fzf](https://github.com/junegunn/fzf)
+- [gcc](https://gcc.gnu.org/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ## Docs
