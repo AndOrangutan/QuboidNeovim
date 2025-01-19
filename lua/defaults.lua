@@ -18,9 +18,19 @@ _M.background = "dark"
 
 _M.ft_exclude = {
     '', -- disable for empty buffer
-    'NeogitStatus',
     'NeogitCommitMessage',
     'NeogitDiffView',
+    'NeogitStatus',
+}
+
+_M.ts_parsers = {
+    "c",
+    "lua",
+    "markdown",
+    "markdown_inline",
+    "query",
+    "vim",
+    "vimdoc",
 }
 
 return _M
