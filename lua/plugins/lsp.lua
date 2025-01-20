@@ -21,7 +21,6 @@ return {
 
             -- Set up kind icons
             local kinds = vim.lsp.protocol.CompletionItemKind
-            vim.notify(vim.inspect(kinds))
             for i, kind in ipairs(kinds) do
                 kinds[i] = MiniIcons.get('lsp', kind) or kind
             end

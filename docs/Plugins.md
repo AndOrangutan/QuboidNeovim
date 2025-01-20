@@ -15,6 +15,10 @@
 
 - [onedark.nvim](https://github.com/navarasu/onedark.nvim) - One dark and light colorscheme.
 
+### Core UI
+
+- [mini.notify](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-notify.md) - Show notifications.
+
 ### Dependencies
 
 - [mini.icons](https://github.com/echasnovski/mini.icons) - Icon provider.
