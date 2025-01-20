@@ -16,17 +16,10 @@
 
 - [onedark.nvim](https://github.com/navarasu/onedark.nvim) - One dark and light colorscheme.
 
-### Core UI
-
-- [mini.notify](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-notify.md) - Show notifications.
 
 ### Dependencies
 
 - [mini.icons](https://github.com/echasnovski/mini.icons) - Icon provider.
-
-### Files
-
-- [oil.nvim](https://github.com/stevearc/oil.nvim) - Edit your filesystem like a buffer.
 
 ### Git
 
@@ -40,7 +33,7 @@
 - [eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim) - Move faster with unique f/F indicators.
 - [vim-illuminate](https://github.com/RRethy/vim-illuminate) - (Neo)Vim plugin for automatically highlighting other uses of the word under the cursor using either LSP, Tree-sitter, or regex matching.
 
-### Keybinding
+### Keybinds
 
 - [which-key.nvim](https://github.com/folke/which-key.nvim) - Create key bindings that stick.
 
@@ -49,6 +42,7 @@
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Quickstart configs for Nvim LSP.
 
 ### Navigation
+
 ### Picker
 
 - [fzf-lua](https://github.com/ibhagwan/fzf-lua) - Improved fzf.vim written in lua.
@@ -56,6 +50,16 @@
 ### Treesitter
 
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Nvim Treesitter configurations and abstraction layer.
+
+### UI
+
+#### Buffers
+
+- [oil.nvim](https://github.com/stevearc/oil.nvim) - Edit your filesystem like a buffer.
+
+#### Core
+
+- [mini.notify](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-notify.md) - Show notifications.
 
 ### Window Management
 

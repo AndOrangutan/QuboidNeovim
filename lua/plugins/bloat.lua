@@ -63,6 +63,12 @@ return {
             local icons = require('util.icons')
             local map = require('mini.map')
 
+            vim.api.nvim_create_user_command('MiniMapOpen', function()
+                require('mini.map').open()
+            end, {})
+            vim.api.nvim_create_user_command('MiniMapClose', function()
+                require('mini.map').close()
+            end, {})
             vim.api.nvim_create_user_command('MiniMapToggle', function()
                 require('mini.map').toggle()
             end, {})
@@ -75,6 +81,7 @@ return {
             vim.api.nvim_create_user_command('MiniMapRefresh', function()
                 require('mini.map').refresh({}, { lines = false, scrollbar = false })
             end, {})
+
 
             return {
                 symbols = {

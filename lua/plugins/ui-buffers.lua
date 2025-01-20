@@ -45,6 +45,18 @@ return {
                 progress = {
                     border = border,
                 },
+                git = {
+                    -- Return true to automatically git add/mv/rm files
+                    add = function(path)
+                        return true
+                    end,
+                    mv = function(src_path, dest_path)
+                        return true
+                    end,
+                    rm = function(path)
+                        return true
+                    end,
+                },
                 ssh = {
                     border = border,
                 },
@@ -54,7 +66,7 @@ return {
             }
         end,
         keys = {
-            { '-', '<cmd>Oil --float<cr>', desc = 'Edit Files' },
+            { '-', '<cmd>Oil<cr>', desc = 'Edit Files' },
         },
     }
 }

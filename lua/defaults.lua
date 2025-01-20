@@ -18,6 +18,7 @@ _M.background = "dark"
 
 _M.ft_exclude = {
     '', -- disable for empty buffer
+    'fugitive',
     'NeogitCommitMessage',
     'NeogitDiffView',
     'NeogitStatus',
