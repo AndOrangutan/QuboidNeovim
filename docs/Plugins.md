@@ -34,6 +34,10 @@
 
 - [which-key.nvim](https://github.com/folke/which-key.nvim) - Create key bindings that stick.
 
+### LSP
+
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Quickstart configs for Nvim LSP.
+
 ### Navigation
 
 - [eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim) - Move faster with unique f/F indicators.
@@ -73,3 +77,6 @@ https://github.com/j-hui/fidget.nvim
 - https://github.com/j-hui/fidget.nvim
 - https://github.com/RRethy/vim-illuminate
 - https://github.com/Bekaboo/dropbar.nvim
+
+- https://github.com/refractalize/oil-git-status.nvim
+- https://github.com/JezerM/oil-lsp-diagnostics.nvim
