@@ -35,6 +35,11 @@
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git integration for buffers.
 - [neogit](https://github.com/NeogitOrg/neogit) - An interactive and powerful Git interface for Neovim, inspired by Magit.
 
+### Indicators
+
+- [eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim) - Move faster with unique f/F indicators.
+- [vim-illuminate](https://github.com/RRethy/vim-illuminate) - (Neo)Vim plugin for automatically highlighting other uses of the word under the cursor using either LSP, Tree-sitter, or regex matching.
+
 ### Keybinding
 
 - [which-key.nvim](https://github.com/folke/which-key.nvim) - Create key bindings that stick.
@@ -44,9 +49,6 @@
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Quickstart configs for Nvim LSP.
 
 ### Navigation
-
-- [eyeliner.nvim](https://github.com/jinh0/eyeliner.nvim) - Move faster with unique f/F indicators.
-
 ### Picker
 
 - [fzf-lua](https://github.com/ibhagwan/fzf-lua) - Improved fzf.vim written in lua.
@@ -82,6 +84,7 @@ https://github.com/j-hui/fidget.nvim
 - https://github.com/j-hui/fidget.nvim
 - https://github.com/RRethy/vim-illuminate
 - https://github.com/Bekaboo/dropbar.nvim
+- https://github.com/mawkler/modicator.nvim
 
 - https://github.com/refractalize/oil-git-status.nvim
 - https://github.com/JezerM/oil-lsp-diagnostics.nvim

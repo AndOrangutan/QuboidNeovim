@@ -23,8 +23,10 @@ vim.api.nvim_create_autocmd('ColorScheme', {
         vim.api.nvim_set_hl(0, 'EyelinerSecondary', { underline = true })
 
         -- -- Illuminate
-        -- vim.api.nvim_set_hl(0, 'IlluminatedWordText', { underline = true, sp = util.get_hl_val('Normal', 'foreground') })
-        --
+        -- vim.api.nvim_set_hl(0, 'IlluminatedWordText', { underline = true })
+        -- vim.api.nvim_set_hl(0, 'IlluminatedWordRead', { underline = true })
+        -- vim.api.nvim_set_hl(0, 'IlluminatedWordWrite', { underline = true })
+
         -- vim.api.nvim_set_hl(0, 'FoldColumn', { link = 'Normal' })
 
     end,
