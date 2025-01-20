@@ -10,6 +10,11 @@
 - [gcc](https://gcc.gnu.org/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 
+#### LSP Servers
+
+- lua-language-server
+- nil
+
 ## Docs
 
 - [Plugins](docs/Plugins.md)
