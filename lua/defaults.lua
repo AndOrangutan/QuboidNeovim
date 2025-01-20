@@ -28,6 +28,7 @@ _M.ts_parsers = {
     "lua",
     "markdown",
     "markdown_inline",
+    "nix",
     "query",
     "vim",
     "vimdoc",

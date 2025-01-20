@@ -19,7 +19,6 @@
       pkgs.ripgrep
     ];
 
-
     lsp_servers = with pkgs; [
       # pkgs.lua-language-server
     ];

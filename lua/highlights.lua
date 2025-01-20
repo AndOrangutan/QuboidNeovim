@@ -9,6 +9,10 @@ vim.api.nvim_create_autocmd('ColorScheme', {
         vim.api.nvim_set_hl(0, 'NormalFloat', { link = 'Pmenu' })
 
 
+        -- Requires `vim.opt.cursorline = true`
+        vim.api.nvim_set_hl(0, "CursorLineNr", { link = "Normal" })
+        vim.api.nvim_set_hl(0, "CursorLine", { link = "NONE" })
+
         -- -- Mini Stuffs
         -- vim.api.nvim_set_hl(0, 'MiniMapNormal', { link = 'Comment' })
         -- vim.api.nvim_set_hl(0, 'MiniIndentscopePrefix', { link = 'Comment' })

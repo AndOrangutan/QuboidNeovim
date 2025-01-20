@@ -46,4 +46,21 @@
 
 - https://github.com/epwalsh/obsidian.nvim
     - https://github.com/epwalsh/obsidian.nvim/issues/770
--
+
+    - github.com/jsongerber/nvim-px-to-rem
+    - https://github.com/brenoprata10/nvim-highlight-colors
+
+- https://github.com/stevearc/quicker.nvim
+
+-- https://github.com/rachartier/tiny-inline-diagnostic.nvim
+
+-- https://github.com/linrongbin16/lsp-progress.nvim
+
+- https://github.com/Jezda1337/nvim-html-css
+- https://github.com/willothy/nvim-cokeline
+- https://github.com/stevearc/dressing.nvim
+- https://github.com/rcarriga/nvim-notify
+https://github.com/j-hui/fidget.nvim
+- https://github.com/j-hui/fidget.nvim
+- https://github.com/RRethy/vim-illuminate
+- https://github.com/Bekaboo/dropbar.nvim
