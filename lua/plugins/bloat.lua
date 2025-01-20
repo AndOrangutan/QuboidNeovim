@@ -56,4 +56,51 @@ return {
             }
         end,
     },
+    {
+        'echasnovski/mini.map',
+        version = '*',
+        opts = function ()
+            local icons = require('util.icons')
+            local map = require('mini.map')
+
+            vim.api.nvim_create_user_command('MiniMapToggle', function()
+                require('mini.map').toggle()
+            end, {})
+            vim.api.nvim_create_user_command('MiniMapFocus', function()
+                require('mini.map').toggle_focus()
+            end, {})
+            vim.api.nvim_create_user_command('MiniMapSwitch', function()
+                require('mini.map').toggle_side()
+            end, {})
+            vim.api.nvim_create_user_command('MiniMapRefresh', function()
+                require('mini.map').refresh({}, { lines = false, scrollbar = false })
+            end, {})
+
+            return {
+                symbols = {
+                    scroll_ldine = icons.ui.bar_cursor,
+                    scroll_view = icons.ui.bar_thick,
+                },
+                window = {
+                    show_integration_count = true,
+                },
+                integrations = {
+                    map.gen_integration.builtin_search({
+                        search = 'ReverseSearch',
+                    }),
+                    map.gen_integration.diagnostic(),
+                    map.gen_integration.gitsigns(),
+                },
+            }
+        end,
+        keys = {
+            { '<leader>mm', '<cmd>MiniMapToggle<cr>',        desc = '[m]ini [m]ap' },
+            { '<leader>mf', '<cmd>MiniMapFocus<cr>',         desc = 'Mini [m]ap Switch [f]ocus' },
+            { '<leader>ms', '<cmd>MiniMapSwitch<cr>',        desc = 'Mini [m]ap Switch [s]ides' },
+            { 'n',          'n' .. '<cmd>MiniMapRefresh<cr>' },
+            { 'N',          'N' .. '<cmd>MiniMapRefresh<cr>' },
+            { '*',          '*' .. '<cmd>MiniMapRefresh<cr>' },
+            { '#',          '#' .. '<cmd>MiniMapRefresh<cr>' },
+        },
+    },
 }
