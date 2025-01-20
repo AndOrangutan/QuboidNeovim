@@ -23,6 +23,13 @@ _M.ft_exclude = {
     'NeogitStatus',
 }
 
+_M.bt_exclude = {
+    'nofile',
+    'quickfix',
+    'prompt',
+}
+
+
 _M.ts_parsers = {
     "c",
     "lua",
