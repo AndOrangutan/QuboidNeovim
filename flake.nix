@@ -17,6 +17,7 @@
       pkgs.fzf
       pkgs.gcc
       pkgs.ripgrep
+      pkgs.file
     ];
 
     lsp_servers = with pkgs; [
