@@ -36,6 +36,7 @@ return {
                 virtual_text = false,
                 float = {
                     source = "always",
+                    thing = "test",
                 },
                 signs = true,
                 underline = true,
@@ -61,5 +62,26 @@ return {
             {"[d", "<cmd>lua vim.diagnostic.goto_prev({float = true})<cr>", desc = "Goto Prev [d]iagnostic (lsp)"},
             {"[d", "<cmd>lua vim.diagnostic.goto_next({float = true})<cr>", desc = "Goto prev [d]iagnostic (lsp)"},
         },
+    },
+    {
+        'rachartier/tiny-inline-diagnostic.nvim',
+        event = {'BufReadPost', 'BufNewFile', 'BufWritePre'},
+        priority = 1000,
+        config = function()
+            local ex = require('util.excludeinator')
+            require('tiny-inline-diagnostic').setup({
+                preset = "simple",
+                disabled_ft = ex:cur('smart-split'):out(),
+                -- options = {
+                --     multilines = {
+                --         -- Enable multiline diagnostic messages
+                --         enabled = true,
+                --
+                --         -- Always show messages on all lines for multiline diagnostics
+                --         always_show = false,
+                --     },
+                -- },
+            })
+        end
     },
 }
