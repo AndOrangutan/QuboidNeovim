@@ -8,6 +8,7 @@ _M.gen = {
     box_o          = ' ',
     box_o_check    = ' ',
     box_renamed    = ' ',
+    server         = ' ',
 }
 
 _M.lsp_diag = {
@@ -30,6 +31,8 @@ _M.ui = {
     arrow_right     = '▶',
 }
 
-
+_M.spinner = {
+    ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '
+}
 
 return _M

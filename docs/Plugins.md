@@ -37,6 +37,13 @@
 
 - [which-key.nvim](https://github.com/folke/which-key.nvim) - Create key bindings that stick.
 
+### Lines
+
+- [dropbar.nvim](https://github.com/Bekaboo/dropbar.nvim) - IDE-like breadcrumbs, out of the box.
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - A blazing fast and easy to configure neovim statusline plugin written in pure lua.
+    - [lsp-progress.nvim](https://github.com/linrongbin16/lsp-progress.nvim) - A performant lsp progress status for Neovim.
+    - [modicator.nvim](https://github.com/mawkler/modicator.nvim) - Cursor line number mode indicator plugin for Neovim.
+
 ### LSP
 
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - Quickstart configs for Nvim LSP.
@@ -60,9 +67,6 @@
 
 #### Core
 
-- [dropbar.nvim](https://github.com/Bekaboo/dropbar.nvim) - IDE-like breadcrumbs, out of the box.
-- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - A blazing fast and easy to configure neovim statusline plugin written in pure lua.
-    - [modicator.nvim](https://github.com/mawkler/modicator.nvim) - Cursor line number mode indicator plugin for Neovim.
 - [mini.notify](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-notify.md) - Show notifications.
 
 ### Window Management
