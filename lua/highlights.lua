@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 
 
         -- Requires `vim.opt.cursorline = true`
-        vim.api.nvim_set_hl(0, "CursorLineNr", { link = "Normal" })
+        --vim.api.nvim_set_hl(0, "CursorLineNr", { link = "Normal" })
         vim.api.nvim_set_hl(0, "CursorLine", { link = "NONE" })
 
         -- -- Mini Stuffs
@@ -31,6 +31,12 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 
         vim.api.nvim_set_hl(0, 'WinBar', { link = "Normal" })
         vim.api.nvim_set_hl(0, 'WinBarNC', { link = "Normal" })
+
+        vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', { undercurl = true })
+        vim.api.nvim_set_hl(0, 'DiagnosticUnderlineWarn', { undercurl = true })
+        vim.api.nvim_set_hl(0, 'DiagnosticUnderlineInfo', { undercurl = true })
+        vim.api.nvim_set_hl(0, 'DiagnosticUnderlineOk', { undercurl = true })
+        vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', { undercurl = true })
     end,
 })
 

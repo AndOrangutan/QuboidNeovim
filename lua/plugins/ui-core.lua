@@ -76,6 +76,22 @@ return {
         end
     },
     {
+        'nvim-lualine/lualine.nvim',
+        dependencies = {
+            'echasnovski/mini.icons',
+            { 'mawkler/modicator.nvim', config = true },
+        },
+        opts = function()
+            return {
+                options = {
+                    component_separators = { left = ' ', right = ' ' },
+                    section_separators = { left = ' ', right = ' ' },
+                    globalstatus = false,
+                },
+            }
+        end,
+    },
+    {
         'echasnovski/mini.notify',
         version = false,
         priority = 1000,
