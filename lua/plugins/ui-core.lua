@@ -81,12 +81,79 @@ return {
             'echasnovski/mini.icons',
             { 'mawkler/modicator.nvim', config = true },
         },
+        event = 'VeryLazy',
         opts = function()
+
+            local icons = require('util.icons')
+
+            local sections = {
+                lualine_a = {
+                    { 'mode', fmt = function(str) return string.lower(str:sub(1, 1)) end },
+                },
+
+                lualine_b = {
+                    {
+                        'branch',
+                        -- cond = min_window_width(120),
+                        icon = icons.gen.box_git,
+                    },
+                    {
+                        'diff',
+                        symbols = {
+                            added = icons.gen.box_added,
+                            modified = icons.gen.box_modified,
+                            removed = icons.gen.box_deleted,
+                        }, -- Changes the symbols used by the diff.
+                        -- cond = min_window_width(120),
+                        on_click = function() vim.cmd('Neogit') end,
+                    },
+                },
+                lualine_c = {
+                    {
+                        'diagnostics',
+                        update_in_insert = true,
+                        symbols = {
+                            error = icons.lsp_diag.Error,
+                            warn = icons.lsp_diag.Warn,
+                            info = icons.lsp_diag.Info,
+                            hint = icons.lsp_diag.Hint
+                        },
+                        -- on_click = function() vim.cmd('TroubleToggle document_diagnostics') end,
+                    },
+                    {
+                        -- lsp_progress.progress,
+                        -- cond = min_window_width(80),
+                        -- color = function(section)
+                        --     return { fg = util.get_hl_val('Comment', 'foreground') }
+                        -- end,
+                        -- on_click = function() vim.cmd('LspInfo') end,
+                    },
+                },
+                lualine_x = {
+                    {
+                        require('lazy.status').updates,
+                        cond = require('lazy.status').has_updates,
+                        color = 'Comment',
+                        on_click = function() vim.cmd('Lazy') end,
+                    },
+                },
+                lualine_y = {
+                    { 'filetype' },
+                    { 'filesize' },
+                    -- { 'encoding',
+                    --     cond = min_window_width(120)
+                    -- },
+                },
+                lualine_z = {
+                    { 'location' },
+                },
+            }
             return {
+                sections = sections,
                 options = {
-                    component_separators = { left = ' ', right = ' ' },
+                    component_separators = { left = icons.ui.bar_thin, right = icons.ui.bar_thin },
                     section_separators = { left = ' ', right = ' ' },
-                    globalstatus = false,
+                    globalstatus = true,
                 },
             }
         end,
@@ -105,15 +172,16 @@ return {
                 require('mini.notify').show_history()
             end, {})
 
+
             return {
                 content = {
                     format = nil,
                     sort = function(notif_arr)
-                       table.sort(
-                           notif_arr,
-                           function(a, b) return a.ts_update > b.ts_update end
-                       )
-                       return notif_arr
+                        table.sort(
+                            notif_arr,
+                            function(a, b) return a.ts_update > b.ts_update end
+                        )
+                        return notif_arr
                     end,
                 },
                 lsp_progress = {
