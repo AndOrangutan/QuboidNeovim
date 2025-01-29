@@ -11,6 +11,8 @@ return {
             local defaults = require("defaults")
             local lspconfig = require("lspconfig")
 
+            lsp.setup_on_attach()
+
             -- Override border
             local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
             function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
@@ -44,13 +46,13 @@ return {
                 severity_sort = true,
             })
 
-            for lspconfig_name, lsp_name in pairs(defaults.lspconfig_to_lsp_name) do
+            for lspconfig_name, tbl in pairs(require('supporter').get('lsp')) do
                 local has_lsp_config, lsp_config = pcall(require, "lsp."..lspconfig_name)
 
                 if has_lsp_config then
                     lsp_config()
                 else
-                    lspconfig[lsp_name].setup({
+                    lspconfig[tbl.alt].setup({
                         capabilities = lsp.gen_capabilities(),
                     })
                 end

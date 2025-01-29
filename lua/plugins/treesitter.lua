@@ -1,4 +1,4 @@
-local ts_parsers = require('defaults').ts_parsers
+local ts_parsers = require('supporter').get('plugins', 'treesitter')
 return {
     {
         'nvim-treesitter/nvim-treesitter',
