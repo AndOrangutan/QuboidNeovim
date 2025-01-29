@@ -3,13 +3,13 @@ local _M = {}
 _M.gen_capabilities = function(opts)
 	local has_cmp, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 
-    local capabilitites = vim.tbl_deep_extend("force",
-        {},
-        vim.lsp.protocol.make_client_capabilities(),
-        has_cmp and cmp_nvim_lsp.default_capabilities() or {},
-        opts or {})
+    -- local capabilitites = vim.tbl_deep_extend("force",
+    --     {},
+    --     vim.lsp.protocol.make_client_capabilities(),
+    --     has_cmp and cmp_nvim_lsp.default_capabilities() or {},
+    --     opts or {})
 
-	return capabilitites
+    return vim.lsp.protocol.make_client_capabilities()
 end
 
 _M.setup_on_attach = function()

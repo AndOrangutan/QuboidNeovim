@@ -12,6 +12,10 @@
       overlays = [ neovim-nightly-overlay.overlays.default ];
     };
 
+    langs = with pkgs; [
+      pkgs.python3
+    ];
+
     deps = with pkgs; [
       # pkgs.curl
       pkgs.fzf
@@ -23,6 +27,7 @@
     lsp_servers = with pkgs; [
       pkgs.lua-language-server
       pkgs.nil
+      pkgs.ruff
     ];
 
     formatters = with pkgs; [
@@ -43,7 +48,7 @@
       name = "neovim-with-deps";
       paths = [
         pkgs.neovim  # Use the nightly version from the overlay
-      ] ++ deps ++ lsp_servers ++ formatters ++ linters ++ plugins;
+      ] ++ langs ++ deps ++ lsp_servers ++ formatters ++ linters ++ plugins;
     };
   };
 }
