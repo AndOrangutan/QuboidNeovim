@@ -31,6 +31,13 @@
 
 - [mini.icons](https://github.com/echasnovski/mini.icons) - Icon provider.
 
+### Filetype
+
+#### Lua
+
+- [lazydev.nvim](https://github.com/folke/lazydev.nvim) - Faster LuaLS setup for Neovim.
+    - [wezterm-types](https://github.com/justinsgithub/wezterm-types) - Wezterm (config) types for Lua Language Server.
+
 ### Git
 
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim) - Single tabpage interface for easily cycling through diffs for all modified files for any git rev.

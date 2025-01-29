@@ -12,6 +12,9 @@ return {
         ---@type blink.cmp.Config
         opts = function ()
             local border = require('defaults').border
+
+            vim.opt.pumheight = 32
+
             return {
                 -- 'default' for mappings similar to built-in completion
                 -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
@@ -36,19 +39,10 @@ return {
                         elseif success and node and vim.tbl_contains({ 'comment', 'line_comment', 'block_comment' }, node:type()) then
                             return { 'buffer' } -- Comments
                         else
-                            return { 'lsp', 'path', 'snippets', 'buffer' }
+                            return { 'lazydev', 'lsp', 'path', 'snippets', 'buffer' }
                         end
                     end,
                     providers = {
-                        lsp = {
-                            override = {
-                                get_trigger_character = function(self)
-                                    local trigger_characters = self:get_trigger_characters()
-                                    vim.list_extend(trigger_characters, { '\n', '\t', ' ' })
-                                    return trigger_characters
-                                end
-                            },
-                        },
                         buffer = {
                             opts = {
                                 get_bufnrs = function()
@@ -89,6 +83,21 @@ return {
                                 end
                                 return out
                             end
+                        },
+                        lazydev = {
+                            name = "LazyDev",
+                            module = "lazydev.integrations.blink",
+                            -- make lazydev completions top priority (see `:h blink.cmp`)
+                            score_offset = 100,
+                        },
+                        lsp = {
+                            override = {
+                                get_trigger_character = function(self)
+                                    local trigger_characters = self:get_trigger_characters()
+                                    vim.list_extend(trigger_characters, { '\n', '\t', ' ' })
+                                    return trigger_characters
+                                end
+                            },
                         },
                         snippets = {
                             should_show_items = function (ctx)
