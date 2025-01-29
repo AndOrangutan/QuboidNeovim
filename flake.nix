@@ -25,9 +25,9 @@
     ];
 
     lsp_servers = with pkgs; [
+      pkgs.basedpyright
       pkgs.lua-language-server
       pkgs.nil
-      pkgs.ruff
     ];
 
     formatters = with pkgs; [

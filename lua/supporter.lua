@@ -23,8 +23,8 @@ support_classes.lsp = {
         alt = 'nil_ls',
         ft = 'nix',
     },
-    ['ruff'] = {
-        alt = 'ruff',
+    ['basedpyright'] = {
+        alt = 'basedpyright',
         ft = 'python',
     },
 }
@@ -40,18 +40,18 @@ support_classes.plugins = {
         "vim",
         "vimdoc",
     },
-    -- ['colorful-menu'] = {
-    --     'c',
-    --     'cs',
-    --     'cpp',
-    --     'go',
-    --     'lua',
-    --     'php',
-    --     'python',
-    --     'rust',
-    --     'typescript',
-    --     'zig',
-    -- }
+    ['colorful-menu'] = {
+        'c',
+        'cs',
+        'cpp',
+        'go',
+        'lua',
+        'php',
+        'python',
+        'rust',
+        'typescript',
+        'zig',
+    }
 }
 
 -- Adds to specified table, extending existing tables
@@ -62,8 +62,16 @@ support_classes.plugins = {
 ---@return SupportClasses[class][subclass]
 supporter.get = function(class, subclass)
     if type(subclass) ~= 'nil' then
+        if support_classes[class][subclass] == nil then
+            vim.notify("Invalid call of supporter.get()", vim.log.levels.ERROR)
+            return {}
+        end
         return support_classes[class][subclass]
     else
+        if support_classes[class] == nil then
+            vim.notify("Invalid call of supporter.get()", vim.log.levels.ERROR)
+            return {}
+        end
         return support_classes[class]
     end
 end
