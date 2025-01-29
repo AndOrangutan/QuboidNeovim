@@ -28,16 +28,35 @@ return {
                 sources = {
                     default = function(ctx)
                         local success, node = pcall(vim.treesitter.get_node)
+
                         if vim.bo.filetype == 'lua' then
                             return { 'lsp', 'path' }
+                        elseif vim.bo.filetype == 'markdown' then
+                            return { 'snippets', 'buffer' }
                         elseif success and node and vim.tbl_contains({ 'comment', 'line_comment', 'block_comment' }, node:type()) then
-                            return { 'buffer' }
+                            return { 'buffer' } -- Comments
                         else
                             return { 'lsp', 'path', 'snippets', 'buffer' }
                         end
                     end,
                     providers = {
+                        lsp = {
+                            override = {
+                                get_trigger_character = function(self)
+                                    local trigger_characters = self:get_trigger_characters()
+                                    vim.list_extend(trigger_characters, { '\n', '\t', ' ' })
+                                    return trigger_characters
+                                end
+                            },
+                        },
                         buffer = {
+                            opts = {
+                                get_bufnrs = function()
+                                    return vim.tbl_filter(function(bufnr)
+                                        return vim.bo[bufnr].buftype == ''
+                                    end, vim.api.nvim_list_bufs())
+                                end
+                            },
                             -- keep case of first char
                             transform_items = function (a, items)
                                 local keyword = a.get_keyword()
@@ -79,7 +98,12 @@ return {
                     },
                 },
                 completion = {
-                    list = { selection = { preselect = false, auto_insert = true } },
+                    list = {
+                        selection = {
+                            preselect = function(ctx) return ctx.mode ~= 'cmdline' end,
+                            auto_insert = function(ctx) return ctx.mode ~= 'cmdline' end
+                        }
+                    },
                     documentation = {
                         auto_show = true,
                         auto_show_delay_ms = 0,
@@ -207,6 +231,13 @@ return {
                 max_width = 60,
             })
         end,
+    },
+
+    {
+        'saghen/blink.compat',
+        version = '*',
+        lazy = true,
+        opts = {},
     },
     {
 
