@@ -13,6 +13,7 @@
 
 #### LSP Servers
 
+- basedpyright
 - lua-language-server
 - nil
 

@@ -20,6 +20,7 @@
 
 - [blink.cmp](https://github.com/Saghen/blink.cmp) - Performant, batteries-included completion plugin for Neovim.
     - [luasnip](https://github.com/L3MON4D3/LuaSnip) - Snippet Engine for Neovim written in Lua.
+- [colorful-menu.nvim](https://github.com/xzbdmw/colorful-menu.nvim) - Bring enjoyment to your auto completion.
 
 #### Snippet Sources
 
