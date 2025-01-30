@@ -25,7 +25,7 @@
     ];
 
     lsp_servers = with pkgs; [
-      pkgs.basedpyright
+      pkgs.pyright
       pkgs.lua-language-server
       pkgs.nil
     ];

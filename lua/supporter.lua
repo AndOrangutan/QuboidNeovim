@@ -23,8 +23,8 @@ support_classes.lsp = {
         alt = 'nil_ls',
         ft = 'nix',
     },
-    ['basedpyright'] = {
-        alt = 'basedpyright',
+    ['pyright'] = {
+        alt = 'pyright',
         ft = 'python',
     },
 }
