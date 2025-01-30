@@ -40,7 +40,9 @@
 
 #### Markdown
 
+- [femaco.lua](https://github.com/AckslD/nvim-FeMaco.lua) - Catalyze your Fenced Markdown Code-block editing!
 - [obsidan.nvim][https://github.com/epwalsh/obsidian.nvim] - Obsidian 🤝 Neovim.
+
 
 ### Git
 

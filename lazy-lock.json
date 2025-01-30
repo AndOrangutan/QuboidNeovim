@@ -22,6 +22,7 @@
   "mini.notify": { "branch": "main", "commit": "05e598d5b349bd66404d576e6a4d4340aea5f194" },
   "modicator.nvim": { "branch": "main", "commit": "45b64561e109cd04de551b081fb947b4f856009e" },
   "neogit": { "branch": "master", "commit": "63124cf520ff24d09deb3b850e053908ab0fc66a" },
+  "nvim-FeMaco.lua": { "branch": "main", "commit": "96bbf843595dbe865838b3f2484b73557f34700c" },
   "nvim-lspconfig": { "branch": "master", "commit": "bf81bef7d75a0f4a0cf61462b318ea00b3c97cc8" },
   "nvim-treesitter": { "branch": "master", "commit": "13f4346876f394973ff676670304a2b734174538" },
   "obsidian.nvim": { "branch": "blink-support", "commit": "658f548192ac0b97b7a0e2e56dbec817187fb8bd" },

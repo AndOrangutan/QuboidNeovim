@@ -1,8 +1,28 @@
 
 local deus_vault = vim.fn.expand('~')..'/Dropbox/obsidian/compendium'
-local ft = { 'markdown' }
+local ft = require('supporter').get('ft', 'markup')
 
 return {
+    {
+        'AckslD/nvim-FeMaco.lua',
+        opts = {
+            border = require('defaults').border,
+            prepare_buffer = function(opts)
+                vim.cmd('split')
+                local win = vim.api.nvim_get_current_win()
+                local buf = vim.api.nvim_create_buf(false, false)
+                return vim.api.nvim_win_set_buf(win, buf)
+            end,
+            post_open_float = function(winnr)
+                -- vim.wo.signcolumn = 'no'
+                vim.wo.winhighlight = 'Nomral:NormalFloat'
+            end
+        },
+        ft = ft,
+        keys = {
+            { '<leader>o', '<cmd>FeMaco<cr>', ft = ft, desc = 'FeMaco [o]pen Codeblock' }
+        },
+    },
     {
         'adamtajti/obsidian.nvim',
         -- 'epwalsh/obsidian.nvim',

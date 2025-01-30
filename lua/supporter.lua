@@ -29,6 +29,13 @@ support_classes.lsp = {
     },
 }
 
+support_classes.ft = {
+    markup = {
+        'markdown',
+    },
+
+}
+
 support_classes.plugins = {
     ['treesitter'] = {
         "c",
@@ -58,7 +65,7 @@ support_classes.plugins = {
 -- Adds to specified table, extending existing tables
 
 -- Retrieve support class
----@param class 'lsp'|'plugins'
+---@param class 'ft'|'lsp'|'plugins'
 ---@param subclass string
 ---@return SupportClasses[class][subclass]
 supporter.get = function(class, subclass)
