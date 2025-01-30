@@ -36,6 +36,7 @@ support_classes.plugins = {
         "markdown",
         "markdown_inline",
         "nix",
+        'python',
         "query",
         "vim",
         "vimdoc",

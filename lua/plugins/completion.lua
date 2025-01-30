@@ -5,6 +5,7 @@ return {
         event = { 'InsertEnter', 'CmdlineEnter' },
         dependencies = {
             'rafamadriz/friendly-snippets',
+            'saghen/blink.compat',
             "xzbdmw/colorful-menu.nvim",
             "L3MON4D3/LuaSnip",
         },
@@ -35,7 +36,7 @@ return {
                         if vim.bo.filetype == 'lua' then
                             return { 'lsp', 'path' }
                         elseif vim.bo.filetype == 'markdown' then
-                            return { 'snippets', 'buffer' }
+                            return { 'lsp', 'snippets', 'buffer' }
                         elseif success and node and vim.tbl_contains({ 'comment', 'line_comment', 'block_comment' }, node:type()) then
                             return { 'buffer' } -- Comments
                         else
