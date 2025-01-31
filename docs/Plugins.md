@@ -78,6 +78,8 @@
 ### Pairs
 
 - [mini.pairs](https://github.com/echasnovski/mini.pairs) - Neovim Lua plugin to automatically manage character pairs. Part of 'mini.nvim' library.
+- [rainbow-delimiters.nvim](https://github.com/HiPhish/rainbow-delimiters.nvim)
+  - Rainbow delimiters for Neovim with Tree-sitter.
 
 ### Picker
 

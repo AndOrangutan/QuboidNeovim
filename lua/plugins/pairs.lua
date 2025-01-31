@@ -1,6 +1,7 @@
 return {
     {
         'echasnovski/mini.pairs',
+        event = { 'InsertEnter', 'CmdlineEnter' },
         version = false,
         opts = {
             mappings = {
@@ -8,4 +9,10 @@ return {
             },
         },
     },
+
+    {
+        'HiPhish/rainbow-delimiters.nvim',
+        event = {'BufReadPost', 'BufNewFile', 'BufWritePre'},
+    }
+
 }

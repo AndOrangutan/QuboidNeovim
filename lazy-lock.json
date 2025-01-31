@@ -31,6 +31,7 @@
   "oil.nvim": { "branch": "master", "commit": "add50252b5e9147c0a09d36480d418c7e2737472" },
   "onedark.nvim": { "branch": "master", "commit": "67a74c275d1116d575ab25485d1bfa6b2a9c38a6" },
   "plenary.nvim": { "branch": "master", "commit": "3707cdb1e43f5cea73afb6037e6494e7ce847a66" },
+  "rainbow-delimiters.nvim": { "branch": "master", "commit": "cf0da2516b0684596b09c51dbc93c609cdc2f455" },
   "smart-splits.nvim": { "branch": "master", "commit": "bfb5e63bd4639439b48815f46636dbd52b19b1bd" },
   "tiny-inline-diagnostic.nvim": { "branch": "main", "commit": "5ceb5733292f51e11670618411ee84d1bca5a3a0" },
   "vim-illuminate": { "branch": "master", "commit": "5eeb7951fc630682c322e88a9bbdae5c224ff0aa" },
