@@ -41,6 +41,7 @@
 #### Markdown
 
 - [femaco.lua](https://github.com/AckslD/nvim-FeMaco.lua) - Catalyze your Fenced Markdown Code-block editing!
+- [headlines.nvim](https://github.com/lukas-reineke/headlines.nvim) - This plugin adds horizontal highlights for text filetypes, like markdown, orgmode, and neorg.
 - [obsidan.nvim][https://github.com/epwalsh/obsidian.nvim] - Obsidian 🤝 Neovim.
 
 
