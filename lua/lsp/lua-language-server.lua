@@ -1,5 +1,11 @@
 return function ()
-    require'lspconfig'.lua_ls.setup {
+    local lsp =  require('util.lsp')
+
+    require'lspconfig'.lua_ls.setup({
+        capabilities = lsp.gen_capabilities(),
+        -- settings = {
+        --     Lua = {}
+        -- },
         on_init = function(client)
             local path = client.workspace_folders[1].name
             if vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc') then
@@ -29,8 +35,5 @@ return function ()
                 },
             })
         end,
-        settings = {
-            Lua = {}
-        }
-    }
+    })
 end

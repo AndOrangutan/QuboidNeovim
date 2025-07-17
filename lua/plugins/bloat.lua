@@ -89,7 +89,7 @@ return {
                     scroll_view = icons.ui.bar_thick,
                 },
                 window = {
-                    show_integration_count = true,
+                    show_integration_count = false,
                 },
                 integrations = {
                     map.gen_integration.builtin_search({

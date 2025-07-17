@@ -13,9 +13,12 @@
 
 #### LSP Servers
 
-- basedpyright
+- `:help lspconfig-all`
+
+- clangd
 - lua-language-server
 - nil
+- pyright
 
 ## Docs
 

@@ -22,8 +22,9 @@ return {
                     goto_right = 'g]',
                 },
                 custom_textobjects = {
+                    -- TODO: Fix
                     -- Function definition (needs treesitter queries with these captures)
-                    F = gen_spec.treesitter({ a = '@function.outer', i = '@function.inner' }),
+                    -- F = gen_spec.treesitter({ a = '@function.outer', i = '@function.inner' }),
                 }
             }
         end,
@@ -35,6 +36,7 @@ return {
         opts = {
             mappings = {
                 [' '] = { action = 'open', pair = '  ', neigh_pattern = '[%(%[{][%)%]}]' },
+                ['`'] = { action = 'closeopen', pair = '``', neigh_pattern = '[^\\`].', register = { cr = false } },
             },
         },
     },

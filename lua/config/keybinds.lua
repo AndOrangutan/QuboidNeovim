@@ -13,6 +13,8 @@ vim.keymap.set('n', 'Q', function()
     end
 end, { desc = 'Save and Close Buffer' })
 
+vim.keymap.set('n', 'p', 'p=`]', { desc = 'Paste' })
+vim.keymap.set('n', 'P', 'P=`]', { desc = 'Paste?' })
 
 vim.keymap.set('n', '<leader>w+', '<c-w>+', { desc = '[w]indow height +' })
 vim.keymap.set('n', '<leader>w-', '<c-w>+', { desc = '[w]indow height -' })
@@ -32,3 +34,4 @@ vim.keymap.set('n', '<leader>wv', '<c-w>v', { desc = '[w]indow split [v]ert' })
 vim.keymap.set('n', '<leader>wT', '<c-w>T', { desc = '[w]indow break into [T]ab' })
 vim.keymap.set('n', '<leader>ww', '<c-w>w', { desc = '[w]indow s[w]itch' })
 vim.keymap.set('n', '<leader>ww', '<c-w>x', { desc = '[w]indow swap next & current' })
+

@@ -15,6 +15,11 @@ local supporter = {}
 local support_classes ={}
 
 support_classes.lsp = {
+    ['clangd'] = {
+        alt = 'clangd',
+        ft = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto' }
+,
+    },
     ['lua-language-server'] = {
         alt = 'lua_ls',
         ft = 'lua',

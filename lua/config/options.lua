@@ -20,7 +20,7 @@ vim.opt.incsearch = true      -- Incremental search
 
 -- Appearance
 vim.opt.termguicolors = true  -- Enable true colors
-vim.opt.signcolumn = "yes"    -- Always show sign column to prevent text shifting
+vim.opt.signcolumn = "yes:2"  -- Always show sign column to prevent text shifting
 vim.opt.wrap = false          -- Disable line wrapping
 
 -- Mouse and clipboard
@@ -60,4 +60,4 @@ vim.opt.listchars:append({
 
 vim.opt.cursorline = true
 
-
+vim.opt.conceallevel = 2
