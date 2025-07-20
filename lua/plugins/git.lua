@@ -36,15 +36,15 @@ return {
         },
         keys = {
             {
-                "<leader>gl",
+                "<leader>gv",
                 function()
                     require('gitgraph').draw({}, { all = true, max_count = 5000 })
                 end,
-                desc = "[g]it [l]ines (gitgraph)",
+                desc = "[g]it Graph [v]isualize",
             },
         },
     },
-    
+
     {
         'lewis6991/gitsigns.nvim',
         event = {'BufReadPost', 'BufNewFile', 'BufWritePre'},

@@ -21,8 +21,17 @@
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git integration for buffers.
 - [neogit](https://github.com/NeogitOrg/neogit) - An interactive and powerful Git interface for Neovim, inspired by Magit.
 
+### Lines
+
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - A blazing fast and easy to configure neovim statusline plugin written in pure lua.
+  - [lsp-progress.nvim](https://github.com/linrongbin16/lsp-progress.nvim) - A performant lsp progress status for Neovim.
+  - [modicator.nvim](https://github.com/mawkler/modicator.nvim) - Cursor line number mode indicator plugin for Neovim.
+
+
 ### Picker
 
 - [fzf-lua](https://github.com/ibhagwan/fzf-lua) - Improved fzf.vim written in lua.
 
 ## To-Do
+
+- [dropbar.nvim](https://github.com/Bekaboo/dropbar.nvim) - IDE-like breadcrumbs, out of the box.
