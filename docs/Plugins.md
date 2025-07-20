@@ -21,4 +21,8 @@
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git integration for buffers.
 - [neogit](https://github.com/NeogitOrg/neogit) - An interactive and powerful Git interface for Neovim, inspired by Magit.
 
+### Picker
+
+- [fzf-lua](https://github.com/ibhagwan/fzf-lua) - Improved fzf.vim written in lua.
+
 ## To-Do
