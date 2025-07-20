@@ -6,6 +6,14 @@
 
 ## Installed
 
+### Colorschemes
+
+- [onedark.nvim](https://github.com/navarasu/onedark.nvim) - One dark and light colorscheme.
+
+### Dependencies
+
+- [mini.icons](https://github.com/echasnovski/mini.icons) - Icon provider.
+
 ### Git
 
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim) - Single tabpage interface for easily cycling through diffs for all modified files for any git rev.
