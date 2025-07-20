@@ -4,11 +4,9 @@
 
 ## Setup
 
-### Dependencies
-
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-
 ## Docs
 
-- [To-Do](docs/To-Do.md)
+- [Dependencies](docs/Dependencies.md)
+- [Plugins](docs/Plugins.md)
+- [Support](docs/Support.md)
 
