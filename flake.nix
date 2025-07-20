@@ -14,9 +14,14 @@
 
     deps = with pkgs; [
       # pkgs.curl
+      pkgs.luarocks
       pkgs.ripgrep
+
     ];
 
+    languages = with pkgs; [
+        pkgs.lua5_1
+    ];
 
     lsp_servers = with pkgs; [
       # pkgs.lua-language-server
@@ -40,7 +45,7 @@
       name = "neovim-with-deps";
       paths = [
         pkgs.neovim  # Use the nightly version from the overlay
-      ] ++ deps ++ lsp_servers ++ formatters ++ linters ++ plugins;
+      ] ++ deps ++ languages ++ lsp_servers ++ formatters ++ linters ++ plugins;
     };
   };
 }
