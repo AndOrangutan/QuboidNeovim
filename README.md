@@ -10,6 +10,7 @@
 - [gcc](https://gcc.gnu.org/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - file
+- luarocks
 
 #### LSP Servers
 

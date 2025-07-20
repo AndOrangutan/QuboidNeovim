@@ -35,8 +35,8 @@ return {
 
                         if vim.bo.filetype == 'lua' then
                             return { 'lsp', 'path' }
-                        elseif vim.bo.filetype == 'markdown' then
-                            return { 'lsp', 'snippets', 'buffer' }
+                        -- elseif vim.bo.filetype == 'markdown' then
+                        --     return { 'lsp', 'snippets', 'buffer'  }
                         elseif success and node and vim.tbl_contains({ 'comment', 'line_comment', 'block_comment' }, node:type()) then
                             return { 'buffer' } -- Comments
                         else

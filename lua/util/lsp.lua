@@ -3,6 +3,7 @@ local _M = {}
 _M.gen_capabilities = function(opts)
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.offsetEncoding = { 'utf-16' }
+    capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
     return capabilities
 end
 

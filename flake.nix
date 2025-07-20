@@ -22,6 +22,7 @@
       pkgs.gcc
       pkgs.ripgrep
       pkgs.file
+      pkgs.luarocks
     ];
 
     lsp_servers = with pkgs; [
