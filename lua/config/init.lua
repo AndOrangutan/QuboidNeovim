@@ -6,6 +6,8 @@ _M.init = function()
         return
     end
     require('config.options')
+    require('config.autocmds')
+    require('config.keymaps')
 end
 
 return _M
