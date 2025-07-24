@@ -13,10 +13,11 @@
     };
 
     deps = with pkgs; [
-      # pkgs.curl
       pkgs.luarocks
       pkgs.ripgrep
       pkgs.gcc
+      pkgs.curl
+      pkgs.rustup
 
     ];
 

@@ -61,3 +61,7 @@ vim.opt.listchars:append({
 vim.opt.cursorline = true
 
 vim.opt.conceallevel = 2
+
+vim.opt.pumheight = 32
+
+vim.opt.winborder = 'solid'

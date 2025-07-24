@@ -10,6 +10,13 @@
 
 - [onedark.nvim](https://github.com/navarasu/onedark.nvim) - One dark and light colorscheme.
 
+### Completion
+
+- [blink.cmp](https://github.com/Saghen/blink.cmp) - Performant, batteries-included completion plugin for Neovim.
+    - [blink.compat](https://github.com/Saghen/blink.compat) - Compatibility layer for using nvim-cmp sources on blink.cmp.
+    - [luasnip](https://github.com/L3MON4D3/LuaSnip) - Snippet Engine for Neovim written in Lua.
+- [colorful-menu.nvim](https://github.com/xzbdmw/colorful-menu.nvim) - Bring enjoyment to your auto completion.
+
 ### Dependencies
 
 - [mini.icons](https://github.com/echasnovski/mini.icons) - Icon provider.
