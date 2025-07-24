@@ -40,7 +40,22 @@ _M.supporter = {
             alt = 'nil_ls',
             ft = { 'nix' },
         },
-    }
+    },
+    plugins = {
+        treesitter = {
+            ft = {
+                "c",
+                "lua",
+                "markdown",
+                "markdown_inline",
+                "nix",
+                'python',
+                "query",
+                "vim",
+                "vimdoc"
+            },
+        },
+    },
 }
 
 return _M

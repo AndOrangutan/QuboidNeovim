@@ -41,6 +41,10 @@
 
 - [fzf-lua](https://github.com/ibhagwan/fzf-lua) - Improved fzf.vim written in lua.
 
+### Treesitter
+
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Nvim Treesitter configurations and abstraction layer.
+
 ## To-Do
 
 - [dropbar.nvim](https://github.com/Bekaboo/dropbar.nvim) - IDE-like breadcrumbs, out of the box.

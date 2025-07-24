@@ -16,6 +16,7 @@
       # pkgs.curl
       pkgs.luarocks
       pkgs.ripgrep
+      pkgs.gcc
 
     ];
 
