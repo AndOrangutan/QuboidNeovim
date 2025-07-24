@@ -1,6 +1,7 @@
 return {
     {
         'navarasu/onedark.nvim',
+        lazy = true,
         opts = {
             code_style = {
                 comments = 'italic',

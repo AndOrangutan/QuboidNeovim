@@ -3,10 +3,10 @@ return {
                 'nvim-lualine/lualine.nvim',
                 dependencies = {
                     'echasnovski/mini.icons',
-                    { 'linrongbin16/lsp-progress.nvim', config = true },
+                    { 'linrongbin16/lsp-progress.nvim'},
                     { 'mawkler/modicator.nvim', config = true },
                 },
-                event = 'VeryLazy',
+                event = 'BufReadPost',
                 opts = function()
 
                     local icons = require('util.icons')
@@ -96,6 +96,7 @@ return {
             },
             {
                 'linrongbin16/lsp-progress.nvim',
+                lazy = true,
                 opts = function()
                     local icons = require('util.icons')
                     return {

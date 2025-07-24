@@ -38,7 +38,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
         vim.api.nvim_set_hl(0, 'DiagnosticUnderlineOk', { undercurl = true })
         vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', { undercurl = true })
 
-     -- require('lualine').refresh()
+     require('lualine').refresh()
     end,
 })
 

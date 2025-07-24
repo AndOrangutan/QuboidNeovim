@@ -2,7 +2,7 @@ return {
     {
         'echasnovski/mini.icons',
         version = false,
-        lazy = true,
+        event = 'BufReadPre',
         opt = {},
         specs = {
             { "nvim-tree/nvim-web-devicons", enabled = false, optional = true },
