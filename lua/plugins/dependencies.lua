@@ -4,6 +4,7 @@ return {
         version = false,
         event = 'BufReadPre',
         opt = {},
+        config = true,
         specs = {
             { "nvim-tree/nvim-web-devicons", enabled = false, optional = true },
         },

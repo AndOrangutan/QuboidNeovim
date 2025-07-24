@@ -30,4 +30,17 @@ _M.bt_exclude = {
     'prompt',
 }
 
+_M.supporter = {
+    lsp = {
+        ['lua-language-server'] = {
+            alt = 'lua_ls',
+            ft = { 'lua' },
+        },
+        ['nil'] = {
+            alt = 'nil_ls',
+            ft = { 'nix' },
+        },
+    }
+}
+
 return _M
