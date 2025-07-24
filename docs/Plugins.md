@@ -21,6 +21,12 @@
 
 - [mini.icons](https://github.com/echasnovski/mini.icons) - Icon provider.
 
+### Filetypes
+
+#### Markdown
+
+- [obsidian.nvim](https://github.com/obsidian-nvim/obsidian.nvim) - Obsidian 🤝 Neovim.
+
 ### Git
 
 - [diffview.nvim](https://github.com/sindrets/diffview.nvim) - Single tabpage interface for easily cycling through diffs for all modified files for any git rev.

@@ -56,7 +56,7 @@ return {
                             kind_icon = {
                                 text = function(ctx)
                                     local kind_icon, _, _ = require('mini.icons').get('lsp', ctx.kind)
-                                    return kind_icon
+                                    return kind_icon..' '
                                 end,
                                 -- (optional) use highlights from mini.icons
                                 highlight = function(ctx)
@@ -100,11 +100,6 @@ return {
             signature = {
                 enabled = true,
                 window = { border = require('defaults').border },
-            },
-            documentation = {
-                auto_show = true,
-                auto_show_delay_ms = 0,
-                window = { border = require('defaults').border }
             },
         },
         --opts_extend = { "sources.default" }
