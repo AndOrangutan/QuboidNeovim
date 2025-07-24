@@ -21,6 +21,11 @@
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git integration for buffers.
 - [neogit](https://github.com/NeogitOrg/neogit) - An interactive and powerful Git interface for Neovim, inspired by Magit.
 
+### Keymaps
+
+- [which-key.nvim](https://github.com/folke/which-key.nvim) - Create key bindings that stick.
+
+
 ### Lines
 
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - A blazing fast and easy to configure neovim statusline plugin written in pure lua.

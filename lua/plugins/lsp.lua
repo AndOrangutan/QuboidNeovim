@@ -53,7 +53,6 @@ return {
             local support_tbl = require('util.supporter'):categories({'lsp'}):elements({'alt'}):out()
             for server_name, server_elements in pairs(support_tbl['lsp']) do
                 local has_lsp_config, lsp_config = pcall(require, "lsp."..server_name)
-                vim.notify(server_name)
 
                 if has_lsp_config then
                     lsp_config()
