@@ -1,4 +1,5 @@
 local lsp_ft = require('util.supporter'):categories({'lsp'}):elements({ 'ft' }):crush()
+local ex = require('util.excludinator')
 
 return {
     {
@@ -73,23 +74,23 @@ return {
     },
     {
         'rachartier/tiny-inline-diagnostic.nvim',
-        event = { 'VeryLazy' },
         priority = 1000,
-        config = function()
-            local ex = require('util.excludinator')
-            require('tiny-inline-diagnostic').setup({
-                preset = "simple",
-                disabled_ft = ex:sel('smart-split', 'ft'):out(),
-                -- options = {
-                    --     multilines = {
-                        --         -- Enable multiline diagnostic messages
-                        --         enabled = true,
-                        --
-                        --         -- Always show messages on all lines for multiline diagnostics
-                        --         always_show = false,
-                        --     },
-                        -- },
-                    })
-                end
+        event = { 'LspAttach' },
+        ft = lsp_ft,
+        opts = {
+            preset = "simple",
+            disabled_ft = ex:sel('tiny-inline-diagnostic', 'ft'):out(),
+            options = {
+                use_icons_from_diagnostic = true,
+                set_arrow_to_diag_color = false,
+                multilines = {
+                    -- Enable multiline diagnostic messages
+                    enabled = true,
+
+                    -- Always show messages on all lines for multiline diagnostics
+                    always_show = false,
+                },
             },
-        }
+        },
+    }
+}

@@ -58,6 +58,12 @@
 
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Nvim Treesitter configurations and abstraction layer.
 
+### UI
+
+#### Buffers
+
+- [oil.nvim](https://github.com/stevearc/oil.nvim) - Edit your filesystem like a buffer.
+
 ### Window Management
 
 - [smart-split.nvim](https://github.com/mrjones2014/smart-splits.nvim) - Smart, seamless, directional navigation and resizing of Neovim + terminal multiplexer splits. Supports tmux, Wezterm, and Kitty. Think about splits in terms of "up/down/left/right".
