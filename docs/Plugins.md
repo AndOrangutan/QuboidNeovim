@@ -67,6 +67,7 @@
 #### Buffers
 
 - [oil.nvim](https://github.com/stevearc/oil.nvim) - Edit your filesystem like a buffer.
+  - [oil-lsp-diagnostics.nvim](https://github.com/JezerM/oil-lsp-diagnostics.nvim)
 
 ### Window Management
 

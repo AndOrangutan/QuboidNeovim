@@ -49,7 +49,7 @@ return {
         'lewis6991/gitsigns.nvim',
         event = {'BufReadPost', 'BufNewFile', 'BufWritePre'},
         opts = function ()
-            icons = require('util.icons')
+            local icons = require('util.icons')
             return {
                 signs = {
                     add          = { text = icons.ui.bar_thick },

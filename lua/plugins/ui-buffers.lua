@@ -1,14 +1,38 @@
 return {
     {
         'stevearc/oil.nvim',
-        dependencies = { { "echasnovski/mini.icons", opts = {} } },
+        dependencies = {
+            "echasnovski/mini.icons",
+        },
+        lazy = false,
         ---@module 'oil'
         ---@type oil.SetupOpts
         opts = function ()
             local border = require("defaults").border
+
+            -- Declare a global function to retrieve the current directory
+            function _G.get_oil_winbar()
+                local bufnr = vim.api.nvim_win_get_buf(vim.g.statusline_winid)
+                local dir = require("oil").get_current_dir(bufnr)
+                if dir then
+                    return vim.fn.fnamemodify(dir, ":~")
+                else
+                    -- If there is no current directory (e.g. over ssh), just show the buffer name
+                    return vim.api.nvim_buf_get_name(0)
+                end
+            end
+
             return {
+                win_options = {
+                    winbar = "%!v:lua.get_oil_winbar()",
+                    -- signcolumn = "yes:2",
+                },
                 delete_to_trash = true,
                 skip_confirm_for_simple_edits = true,
+                columns = {
+                    "icon",
+                    -- "permissions", "size", "mtime",
+                },
                 keymaps = {
                     ["g?"] = { "actions.show_help", mode = "n" },
                     ["<CR>"] = "actions.select",
@@ -70,5 +94,20 @@ return {
         keys = {
             { '-', '<cmd>Oil<cr>', desc = 'Edit Files' },
         },
-    }
+    },
+    {
+        "JezerM/oil-lsp-diagnostics.nvim",
+        dependencies = { "stevearc/oil.nvim" },
+        opts = function ()
+            local icons = require('util.icons')
+            return {
+                diagnostic_symbols = {
+                    error = icons.lsp_diag.Error,
+                    warn  = icons.lsp_diag.Warn,
+                    info  = icons.lsp_diag.Info,
+                    hint  = icons.lsp_diag.Hint,
+                },
+            }
+        end,
+    },
 }
