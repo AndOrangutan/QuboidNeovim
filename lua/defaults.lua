@@ -23,6 +23,11 @@ _M.supporter = {
         ['nil'] = {
             alt = 'nil_ls',
             ft = { 'nix' },
+        },
+        ['clangd'] = {
+            alt = 'clangd',
+            ft = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
+        },
     },
     config = {
         exclude = {
