@@ -9,4 +9,4 @@ require("plugin-manager")
 
 require('highlights')
 
-require('test')
+-- require('test')

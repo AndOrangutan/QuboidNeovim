@@ -37,6 +37,7 @@ return {
                 nerd_font_variant = 'normal'
             },
 
+
             -- (Default) Only show the documentation popup when manually triggered
             completion = {
                 documentation = { auto_show = false },
@@ -89,6 +90,18 @@ return {
                         return { 'lsp', 'path', 'snippets', 'buffer' }
                     end
                 end,
+                providers = {
+                    buffer = {
+                        opts = {
+                            get_bufnrs = function()
+                                return vim.tbl_filter(function(bufnr)
+                                    -- TODO: extend filter
+                                    return vim.bo[bufnr].buftype == ''
+                                end, vim.api.nvim_list_bufs())
+                            end
+                        }
+                    }
+                },
             },
 
             -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance

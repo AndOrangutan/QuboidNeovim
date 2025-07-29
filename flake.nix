@@ -24,6 +24,8 @@
         pkgs.imagemagick
         pkgs.luarocks
         pkgs.ripgrep
+        pkgs.tree-sitter
+        pkgs.nodejs
 
       ];
 

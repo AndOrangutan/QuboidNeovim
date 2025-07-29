@@ -64,14 +64,17 @@ _M.supporter = {
         treesitter = {
             ft = {
                 "c",
+                "html",
+                "latex",
                 "lua",
                 "markdown",
                 "markdown_inline",
                 "nix",
-                'python',
+                "python",
                 "query",
                 "vim",
-                "vimdoc"
+                "vimdoc",
+                "yaml",
             },
         },
     },

@@ -23,6 +23,52 @@ return {
         },
     },
     {
+        'OXY2DEV/markview.nvim',
+        -- lazy = false,
+        priority = 49,
+        dependencies = {
+            "saghen/blink.cmp"
+        },
+        ft = ft,
+        opts = {
+            preview = {
+                modes = { "n", "no", "c", "i" },
+                hybrid_modes = { "i", "n" },
+                icon_provider = "mini", -- "mini" or "devicons"
+                linewise_hybrid_mode = true
+            },
+            markdown = {
+                headings = {
+                    heading_1 = { sign = "" },
+                    heading_2 = { sign = "" }
+                },
+                list_items = {
+                    marker_minus = {
+                        add_padding = false,
+                    },
+                    marker_plus = {
+                        add_padding = false,
+                    },
+                    marker_star = {
+                        add_padding = false,
+                    },
+                    marker_dot = {
+                        add_padding = false,
+                    },
+                    marker_parenthesis = {
+                        add_padding = false,
+                    },
+                },
+            },
+            code_blocks = {
+                sign = '',
+            },
+            latex = {
+                enable = false,
+            },
+        },
+    },
+    {
         'obsidian-nvim/obsidian.nvim',
         dependencies = {
             "nvim-lua/plenary.nvim",
