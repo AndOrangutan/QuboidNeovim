@@ -1,0 +1,23 @@
+return {
+    -- {
+    --     '3rd/image.nvim',
+    --     ft = require('util.supporter'):categories({'config'}):indicies({'image'}):elements({ 'ft' }):crush(),
+    --     lazy = false,
+    --     opts = {
+    --         integrations = {
+    --             markdown = {
+    --                 enabled = true,
+    --                 resolve_image_path = function(document_path, image_path, fallback)
+    --                     local working_dir = vim.fn.getcwd()
+    --                     -- Format image path for Obsidian notes
+    --                     if (working_dir:find("path/to/match",1,true)) then
+    --                         return working_dir .. "/" .. image_path
+    --                     end
+    --                     -- Fallback to the default behavior
+    --                     return fallback(document_path, image_path)
+    --                 end,
+    --             },
+    --         },
+    --     },
+    -- },
+}

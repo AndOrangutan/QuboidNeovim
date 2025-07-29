@@ -23,6 +23,10 @@
 
 ### Filetypes
 
+#### Image
+
+- [image.nvim](https://github.com/3rd/image.nvim) - Bringing images to Neovim.
+
 #### Markdown
 
 - [obsidian.nvim](https://github.com/obsidian-nvim/obsidian.nvim) - Obsidian 🤝 Neovim.
@@ -67,7 +71,6 @@
 ### Window Management
 
 - [smart-split.nvim](https://github.com/mrjones2014/smart-splits.nvim) - Smart, seamless, directional navigation and resizing of Neovim + terminal multiplexer splits. Supports tmux, Wezterm, and Kitty. Think about splits in terms of "up/down/left/right".
-- [bufresize.nvim](https://github.com/kwkarlwang/bufresize.nvim) - Keep buffer dimensions in proportion when terminal window is resized.
 
 ## To-Do
 
