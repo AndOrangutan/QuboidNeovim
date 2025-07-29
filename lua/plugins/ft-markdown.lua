@@ -1,5 +1,27 @@
 local deus_vault = vim.fn.expand('~')..'/Sync/Notes/compendium'
+local ft = require('util.supporter'):categories({'config'}):indicies({ 'ft' }):elements({ 'markdown' }):crush()
+
 return {
+    {
+        'AckslD/nvim-FeMaco.lua',
+        opts = {
+            border = require('defaults').border,
+            prepare_buffer = function(opts)
+                vim.cmd('split')
+                local win = vim.api.nvim_get_current_win()
+                local buf = vim.api.nvim_create_buf(false, false)
+                return vim.api.nvim_win_set_buf(win, buf)
+            end,
+            post_open_float = function(winnr)
+                -- vim.wo.signcolumn = 'no'
+                vim.wo.winhighlight = 'Nomral:NormalFloat'
+            end
+        },
+        ft = ft,
+        keys = {
+            { '<leader>o', '<cmd>FeMaco<cr>', ft = ft, desc = 'FeMaco [o]pen Codeblock' }
+        },
+    },
     {
         'obsidian-nvim/obsidian.nvim',
         dependencies = {
@@ -7,7 +29,7 @@ return {
 
         },
         --version = '*',
-        ft = 'markdown',
+        ft = ft,
         lazy = true,
         cmd = 'Obsidian',
         opts = {
@@ -93,42 +115,21 @@ return {
             },
 
             ui = {
-                enable = true, -- set to false to disable all additional syntax features
-                ignore_conceal_warn = false, -- set to true to disable conceallevel specific warning
-                update_debounce = 200, -- update delay after a text change (in milliseconds)
-                max_file_length = 5000, -- disable UI features for files with more than this many lines
-                -- Define how various check-boxes are displayed
-                checkboxes = {
-                    -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
-                    [" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
-                    ["x"] = { char = "", hl_group = "ObsidianDone" },
-                    [">"] = { char = "", hl_group = "ObsidianRightArrow" },
-                    ["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
-                    ["!"] = { char = "", hl_group = "ObsidianImportant" },
-                    -- Replace the above with this if you don't have a patched font:
-                    -- [" "] = { char = "☐", hl_group = "ObsidianTodo" },
-                    -- ["x"] = { char = "✔", hl_group = "ObsidianDone" },
-
-                    -- You can also add more custom ones...
-                },
-                -- Use bullet marks for non-checkbox lists.
-                bullets = { char = "•", hl_group = "ObsidianBullet" },
-                external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
-                -- Replace the above with this if you don't have a patched font:
-                -- external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
-                reference_text = { hl_group = "ObsidianRefText" },
-                highlight_text = { hl_group = "ObsidianHighlightText" },
-                tags = { hl_group = "ObsidianTag" },
-                block_ids = { hl_group = "ObsidianBlockID" },
+                enable = false,
             },
 
             attachments = {
                 img_folder = "assets/imgs",
                 img_name_func = function()
-                    return string.format("Pasted image %s", os.date "%Y%m%d%H%M%S")
+                    return os.date("%Y%m%d%H%M%S")
+                end,
+                img_text_func = function(client, path)
+                    path = client:vault_relative_path(path) or path
+                    return string.format("![%s](%s)", path.name, path)
                 end,
                 confirm_img_paste = true,
             },
+            legacy_commands = false,
             open = {
                 use_advanced_uri = true,
                 func = vim.ui.open,

@@ -30,6 +30,11 @@ _M.supporter = {
         },
     },
     config = {
+        ft = {
+            markdown = {
+                'markdown',
+            },
+        },
         exclude = {
             ft = {
                 '', -- disable for empty buffer
@@ -54,6 +59,7 @@ _M.supporter = {
             },
         },
     },
+
     plugins = {
         treesitter = {
             ft = {
