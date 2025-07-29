@@ -2,9 +2,9 @@ local _M = {}
 
 local is_initialized = false
 
-local cat_filter = nil
-local ind_filter = nil
-local ele_filter = nil
+_M.cat_filter = nil
+_M.ind_filter = nil
+_M.ele_filter = nil
 
 -- TODO: Maybe cache the lookups?
 
@@ -32,7 +32,7 @@ function _M:categories(to_filter)
         vim.notify('Impropper value: ', to_filter)
     end
 
-    cat_filter = to_filter
+    _M.cat_filter = to_filter
     return self
 end
 
@@ -44,7 +44,7 @@ function _M:indicies(to_filter)
         vim.notify('Impropper value: ', to_filter)
     end
 
-    ind_filter = to_filter
+    _M.ind_filter = to_filter
     return self
 end
 
@@ -56,7 +56,7 @@ function _M:elements(to_filter)
         vim.notify('Impropper value: ', to_filter)
     end
 
-    ele_filter = to_filter
+    _M.ele_filter = to_filter
     return self
 end
 
@@ -83,7 +83,16 @@ function _M:out()
     if is_initialized == false then
         vim.notify('Supporter must be initialized first!!!')
     end
-    return deep_copy_filter(supporter, {cat_filter, ind_filter, ele_filter})
+
+    local temp_cat_filter = _M.cat_filter
+    local temp_ind_filter = _M.ind_filter
+    local temp_ele_filter = _M.ele_filter
+
+    _M.cat_filter = nil
+    _M.ind_filter = nil
+    _M.ele_filter = nil
+
+    return deep_copy_filter(supporter, {temp_cat_filter, temp_ind_filter, temp_ele_filter})
 end
 
 local function deep_copy_crush(in_tbl, filters)
@@ -111,7 +120,16 @@ function _M:crush()
     if is_initialized == false then
         vim.notify('Supporter must be initialized first!!!')
     end
-    return deep_copy_crush(supporter, {cat_filter, ind_filter, ele_filter})
+
+    local temp_cat_filter = _M.cat_filter
+    local temp_ind_filter = _M.ind_filter
+    local temp_ele_filter = _M.ele_filter
+
+    _M.cat_filter = nil
+    _M.ind_filter = nil
+    _M.ele_filter = nil
+
+    return deep_copy_crush(supporter, {temp_cat_filter, temp_ind_filter, temp_ele_filter})
 end
 
 return _M

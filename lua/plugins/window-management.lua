@@ -1,20 +1,9 @@
 return {
     {
         'mrjones2014/smart-splits.nvim',
-        dependencies = {
-            { 'kwkarlwang/bufresize.nvim', config = true },
+        opts = {
+            ignore_filetypes = require('util.supporter'):categories({'config'}):indicies({'exclude'}):elements({ 'ft' }):crush()
         },
-        opts = function()
-            local ex = require('util.excludeinator')
-            return {
-                resize_mode = {
-                    hooks = {
-                        on_leave = require('bufresize').register,
-                    },
-                },
-                ignore_filetypes = ex:cur('smart-split'):out()
-            }
-        end,
         keys = {
             { '<C-A-h>', '<cmd>lua require("smart-splits").resize_left()<cr>',       desc = 'Resize Left (smart-split)' },
             { '<C-A-j>', '<cmd>lua require("smart-splits").resize_down()<cr>',       desc = 'Resize Down (smart-split)' },

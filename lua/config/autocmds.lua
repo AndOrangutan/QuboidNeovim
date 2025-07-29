@@ -27,6 +27,17 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 vim.api.nvim_create_autocmd({"BufWritePre"}, {
     pattern = "*",
     callback = function(event)
+
+        -- Get the current buffer's filetype
+        local current_filetype = vim.bo.filetype
+
+        -- Check if the current filetype is in the exclude list
+        for _, ft in ipairs(require('util.supporter'):categories({'config'}):indicies({'exclude'}):elements({'ft'}):crush()) do
+            if current_filetype == ft then
+                return -- Do not run the autocmd for excluded filetypes
+            end
+        end
+
         local dir = vim.fn.fnamemodify(event.file, ":p:h")
         if vim.fn.isdirectory(dir) == 0 then
             vim.fn.mkdir(dir, "p")

@@ -1,5 +1,4 @@
 local lsp_ft = require('util.supporter'):categories({'lsp'}):elements({ 'ft' }):crush()
-local ex = require('util.excludinator')
 
 return {
     {
@@ -79,7 +78,7 @@ return {
         ft = lsp_ft,
         opts = {
             preset = "simple",
-            disabled_ft = ex:sel('tiny-inline-diagnostic', 'ft'):out(),
+            disabled_ft = require('util.supporter'):categories({'config'}):indicies({'exclude'}):elements({ 'ft' }):crush(),
             options = {
                 use_icons_from_diagnostic = true,
                 set_arrow_to_diag_color = false,

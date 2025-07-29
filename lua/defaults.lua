@@ -14,22 +14,6 @@ _M.border = {
 _M.colorscheme = "onedark"
 _M.background = "dark"
 
-
-_M.ft_exclude = {
-    '', -- disable for empty buffer
-    'fugitive',
-    'Lazy',
-    'NeogitCommitMessage',
-    'NeogitDiffView',
-    'NeogitStatus',
-}
-
-_M.bt_exclude = {
-    'nofile',
-    'quickfix',
-    'prompt',
-}
-
 _M.supporter = {
     lsp = {
         ['lua-language-server'] = {
@@ -39,6 +23,30 @@ _M.supporter = {
         ['nil'] = {
             alt = 'nil_ls',
             ft = { 'nix' },
+    },
+    config = {
+        exclude = {
+            ft = {
+                '', -- disable for empty buffer
+                'Lazy',
+                'NeogitCommitMessage',
+                'NeogitDiffView',
+                'NeogitStatus',
+                'fugitive',
+                'oil',
+            },
+            bt = {
+                'nofile',
+                'quickfix',
+                'prompt',
+            },
+        },
+        images = {
+            ft = {
+                'jpg',
+                'png',
+                'oil',
+            },
         },
     },
     plugins = {
