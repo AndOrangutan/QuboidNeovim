@@ -4,6 +4,10 @@ _M.gen_capabilities = function(opts)
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.offsetEncoding = { 'utf-16' }
 
+    capabilities.textDocument.foldingRange = {
+        dynamicRegistration = false,
+        lineFoldingOnly = true
+    }
     local blink_ok, blink = pcall(require, 'blink.cmp')
     if blink_ok then capabilities = blink.get_lsp_capabilities(capabilities) end
 
