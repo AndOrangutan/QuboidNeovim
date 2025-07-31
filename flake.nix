@@ -19,19 +19,21 @@
       };
 
       deps = with pkgs; [
+        # pkgs.gcc # Conflicts with clnag
         pkgs.curl
-        # pkgs.gcc
+        pkgs.gnumake
         pkgs.imagemagick
         pkgs.luarocks
+        pkgs.nodejs
         pkgs.ripgrep
         pkgs.tree-sitter
-        pkgs.nodejs
 
       ];
 
       languages = with pkgs; [
         pkgs.lua5_1
-        pkgs.rustup
+        # pkgs.rustup
+        pkgs.cargo
       ];
 
       lsp_servers = with pkgs; [

@@ -6,6 +6,12 @@
 
 ## Installed
 
+### Bloat
+
+- [mini.animate](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-animate.md) - Animate common Neovim actions.
+- [mini.indentscope](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-indentscope.md) - Visualize and work with indent scope.
+- [mini.map](https://github.com/echasnovski/mini.map) - Window with buffer text overview, scrollbar, and highlights.
+
 ### Colorschemes
 
 - [onedark.nvim](https://github.com/navarasu/onedark.nvim) - One dark and light colorscheme.
