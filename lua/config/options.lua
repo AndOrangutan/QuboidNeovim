@@ -4,6 +4,7 @@ vim.g.maplocalleader = "\\"
 
 -- Line numbers
 vim.opt.number = true        -- Enable line numbers
+vim.opt.numberwidth = 3
 vim.opt.relativenumber = true -- Enable relative line numbers
 
 -- Tab and indentation

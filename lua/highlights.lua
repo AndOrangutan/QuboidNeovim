@@ -27,7 +27,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
         -- vim.api.nvim_set_hl(0, 'IlluminatedWordRead', { underline = true })
         -- vim.api.nvim_set_hl(0, 'IlluminatedWordWrite', { underline = true })
 
-        -- vim.api.nvim_set_hl(0, 'FoldColumn', { link = 'Normal' })
+        vim.api.nvim_set_hl(0, 'FoldColumn', { link = 'LineNr' })
 
         vim.api.nvim_set_hl(0, 'WinBar', { link = "Normal" })
         vim.api.nvim_set_hl(0, 'WinBarNC', { link = "Normal" })
